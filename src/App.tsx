@@ -1,10 +1,11 @@
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 
 function App() {
   return (
-    <View>
+    <NavigationContainer>
       <Text>RNNavigationApp</Text>
-    </View>
+    </NavigationContainer>
   );
 }
 
