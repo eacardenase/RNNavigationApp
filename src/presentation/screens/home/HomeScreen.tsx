@@ -13,6 +13,11 @@ export const HomeScreen = () => {
         label="Products"
         onPress={() => navigation.navigate('Products' as never)}
       />
+
+      <PrimaryButton
+        label="Settings"
+        onPress={() => navigation.navigate('Settings' as never)}
+      />
     </View>
   );
 };
