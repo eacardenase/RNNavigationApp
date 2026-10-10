@@ -1,4 +1,4 @@
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, useWindowDimensions, View } from 'react-native';
 import {
   createDrawerNavigator,
   DrawerContentComponentProps,
@@ -12,12 +12,14 @@ import { GlobalColors } from '../theme/theme';
 const Drawer = createDrawerNavigator();
 
 export const SideMenuNavigator = () => {
+  const { width } = useWindowDimensions();
+
   return (
     <Drawer.Navigator
       drawerContent={props => <CustomDrawerContent {...props} />}
       screenOptions={{
         headerShown: false,
-        drawerType: 'slide',
+        drawerType: width >= 758 ? 'permanent' : 'slide',
         drawerActiveBackgroundColor: GlobalColors.primary,
         drawerActiveTintColor: GlobalColors.background,
         drawerInactiveTintColor: GlobalColors.primary,
