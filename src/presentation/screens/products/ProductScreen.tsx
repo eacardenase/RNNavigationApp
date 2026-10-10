@@ -16,7 +16,7 @@ export const ProductScreen = () => {
 
   return (
     <View style={GlobalStyles.containter}>
-      <Text style={style.title}>Product Screen</Text>
+      <Text style={GlobalStyles.title}>Product Screen</Text>
 
       <Text style={style.product}>
         {params.id} - {params.name}
@@ -26,10 +26,6 @@ export const ProductScreen = () => {
 };
 
 const style = StyleSheet.create({
-  title: {
-    fontSize: 30,
-    marginBottom: 10,
-  },
   product: {
     fontSize: 20,
     textAlign: 'center',

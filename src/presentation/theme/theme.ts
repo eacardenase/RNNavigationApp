@@ -17,6 +17,10 @@ export const GlobalStyles = StyleSheet.create({
     padding: 20,
     backgroundColor: GlobalColors.background,
   },
+  title: {
+    fontSize: 30,
+    marginBottom: 10,
+  },
   primaryButton: {
     backgroundColor: GlobalColors.primary,
     borderRadius: 5,

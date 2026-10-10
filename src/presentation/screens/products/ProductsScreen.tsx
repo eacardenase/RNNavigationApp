@@ -1,4 +1,4 @@
-import { View, Text, FlatList, StyleSheet } from 'react-native';
+import { View, Text, FlatList } from 'react-native';
 import { type NavigationProp, useNavigation } from '@react-navigation/native';
 import { GlobalStyles } from '../../theme/theme';
 import { PrimaryButton } from '../../components/shared/PrimaryButton';
@@ -19,7 +19,7 @@ export const ProductsScreen = () => {
 
   return (
     <View style={GlobalStyles.containter}>
-      <Text style={style.title}>Products</Text>
+      <Text style={GlobalStyles.title}>Products</Text>
 
       <FlatList
         data={products}
@@ -33,7 +33,7 @@ export const ProductsScreen = () => {
         )}
       />
 
-      <Text style={style.title}>Settings</Text>
+      <Text style={GlobalStyles.title}>Settings</Text>
 
       <PrimaryButton
         label="Settings"
@@ -44,10 +44,3 @@ export const ProductsScreen = () => {
     </View>
   );
 };
-
-const style = StyleSheet.create({
-  title: {
-    fontSize: 30,
-    marginBottom: 10,
-  },
-});
