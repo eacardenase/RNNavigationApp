@@ -1,25 +1,11 @@
-import { useEffect } from 'react';
-import { View, Text, Pressable } from 'react-native';
-import { DrawerActions, useNavigation } from '@react-navigation/native';
+import { View, Text } from 'react-native';
 import { GlobalStyles } from '../../theme/theme';
+import { HamburguerMenu } from '../../components/shared/HamburguerMenu';
 
 export const Tab1Screen = () => {
-  const navigation = useNavigation();
-
-  useEffect(() => {
-    navigation.setOptions({
-      headerLeft: () => (
-        <Pressable
-          onPress={() => navigation.dispatch(DrawerActions.toggleDrawer)}
-        >
-          <Text>Menu</Text>
-        </Pressable>
-      ),
-    });
-  });
-
   return (
     <View style={GlobalStyles.containter}>
+      <HamburguerMenu />
       <Text style={GlobalStyles.title}>Tab1 Screen</Text>
     </View>
   );
