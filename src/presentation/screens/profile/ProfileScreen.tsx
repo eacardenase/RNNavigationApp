@@ -9,13 +9,10 @@ export const ProfileScreen = () => {
   const navigation = useNavigation();
 
   return (
-    <View
-      style={{
-        ...GlobalStyles.containter,
-        marginTop: top,
-      }}
-    >
-      <Text style={GlobalStyles.title}>ProfileScreen</Text>
+    <View style={GlobalStyles.containter}>
+      <Text style={{ ...GlobalStyles.title, marginTop: top }}>
+        Profile Screen
+      </Text>
 
       <PrimaryButton
         label="Open menu"
