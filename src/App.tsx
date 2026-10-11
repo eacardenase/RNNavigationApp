@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import {
-  BottomTabsNavigator,
-  // SideMenuNavigator,
+  // BottomTabsNavigator,
+  SideMenuNavigator,
   // StackNavigator
 } from './presentation/routes';
 
@@ -9,8 +9,8 @@ function App() {
   return (
     <NavigationContainer>
       {/* <StackNavigator /> */}
-      {/* <SideMenuNavigator /> */}
-      <BottomTabsNavigator />
+      <SideMenuNavigator />
+      {/* <BottomTabsNavigator /> */}
     </NavigationContainer>
   );
 }
