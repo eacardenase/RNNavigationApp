@@ -1,19 +1,22 @@
-import { useEffect } from 'react';
+import { useCallback, useLayoutEffect } from 'react';
 import { Pressable, Text } from 'react-native';
 import { DrawerActions, useNavigation } from '@react-navigation/native';
 
 export const HamburguerMenu = () => {
   const navigation = useNavigation();
 
-  useEffect(() => {
+  const handlePress = useCallback(() => {
+    navigation.dispatch(DrawerActions.toggleDrawer());
+  }, [navigation]);
+
+  const renderMenuButton = useCallback(
+    () => <MenuButton onPress={handlePress} />,
+    [handlePress],
+  );
+
+  useLayoutEffect(() => {
     navigation.setOptions({
-      headerLeft: () =>
-        MenuButton({
-          onPress: () => navigation.dispatch(DrawerActions.toggleDrawer),
-        }),
-        // <MenuButton
-        //   onPress={() => navigation.dispatch(DrawerActions.toggleDrawer)}
-        // />
+      headerLeft: renderMenuButton,
     });
   });
 
