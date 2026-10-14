@@ -1,3 +1,4 @@
+export * from './BottomTabsNavigator';
 export * from './SideMenuNavigator';
 export * from './StackNavigator';
-export * from './BottomTabsNavigator';
+export * from './TopTabsNavigator';

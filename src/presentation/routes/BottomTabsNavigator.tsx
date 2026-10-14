@@ -1,7 +1,8 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Tab1Screen, Tab2Screen, Tab3Screen } from '../screens';
-import { GlobalColors } from '../theme/theme';
 import { Text } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Tab1Screen, Tab3Screen } from '../screens';
+import { GlobalColors } from '../theme/theme';
+import { TopTabsNavigator } from './';
 
 const Tab = createBottomTabNavigator();
 
@@ -39,7 +40,7 @@ export const BottomTabsNavigator = () => {
           title: 'Tab2',
           tabBarIcon: ({ color }) => <Text style={{ color }}>Tab2</Text>,
         }}
-        component={Tab2Screen}
+        component={TopTabsNavigator}
       />
       <Tab.Screen
         name="Tab3"
