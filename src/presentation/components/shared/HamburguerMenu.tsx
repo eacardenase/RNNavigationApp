@@ -1,6 +1,8 @@
 import { useCallback, useLayoutEffect } from 'react';
-import { Pressable, Text } from 'react-native';
+import { Pressable } from 'react-native';
 import { DrawerActions, useNavigation } from '@react-navigation/native';
+import { IonIcon } from './IonIcon';
+import { GlobalColors } from '../../theme/theme';
 
 export const HamburguerMenu = () => {
   const navigation = useNavigation();
@@ -30,7 +32,7 @@ interface Props {
 const MenuButton = ({ onPress }: Props) => {
   return (
     <Pressable onPress={onPress}>
-      <Text>Menu</Text>
+      <IonIcon name="menu" size={35} color={GlobalColors.primary} />
     </Pressable>
   );
 };
